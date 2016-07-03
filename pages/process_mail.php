@@ -28,7 +28,7 @@ isSuspect($_POST, $pattern, $suspect);
 // Process the form only if no suspect phrases are found
 if (!$suspect) :
     // Check that required fields have been filled in,
-    // and reassign expected elements to simple variables
+    // and re-assign expected elements to simple variables
     foreach ($_POST as $key => $value) {
         $value = is_array($value) ? $value : trim($value);
         if (empty($value) && in_array($key, $required)) {

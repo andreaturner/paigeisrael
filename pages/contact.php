@@ -155,10 +155,9 @@ if (isset($_POST['send'])) {
         <?php
             endif;
         ?>
-        
             </label>
+				
                 <textarea name="comments" id="comments">
-        
         <?php
             if ($errors || $missing) {
                 echo htmlentities($comments);
@@ -172,6 +171,5 @@ if (isset($_POST['send'])) {
         </p>
         
         </form>
-	
     </body>
 </html>
