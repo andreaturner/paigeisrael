@@ -27,7 +27,6 @@
             echo '<p class="label-text">You submitted the following information:<br>';
             echo '<p class="label-text">Your first name is '. $fname .'.<br>
             Your last name is '. $lname .'.<br>
-            Your phone number is '. $phone .'.<br>
             Your email address is '. $email .'.</p>
             <p class="label-text">I can help you with...'.' '.' '.' '.' ' .$other .'</p>';
         ?>
