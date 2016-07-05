@@ -5,12 +5,29 @@ $mailSent = false;
 // Assume the input contains nothing suspect
 $suspect = false;
 
+
+$mailSent = mail('paige.israel@yahoo.com ', 'Test email from contact page', 'This better work!');
+if (!$mailSent) {
+    $errors['mailfail'] = true;
+}
+
+exit;
+
+
+
+
+
+
+
+
+
+/*
 // Regular expression to search for suspect phrases
 $pattern = '/Content-type:|Bcc:|Cc:/i';
 
 // Recursive function that checks for suspect phrases
 // Third argument is passed by reference
-function isSuspect($value, $pattern, &$suspect) {
+function isSuspect($value, $pattern, $suspect) {
     if (is_array($value)) {
         foreach ($value as $item) {
             isSuspect($item, $pattern, $suspect);
@@ -23,7 +40,7 @@ function isSuspect($value, $pattern, &$suspect) {
 }
 
 // Check the $_POST array for suspect phrases
-isSuspect($_POST, $pattern, $suspect);
+// isSuspect($_POST, $pattern, $suspect);
 
 // Process the form only if no suspect phrases are found
 if (!$suspect) :
@@ -33,9 +50,9 @@ if (!$suspect) :
         $value = is_array($value) ? $value : trim($value);
         if (empty($value) && in_array($key, $required)) {
             $missing[] = $key;
-            $$key = '';
+            $key = '';
         } elseif (in_array($key, $expected)) {
-            $$key = $value;
+            $key = $value;
         }
     }
     
@@ -56,8 +73,8 @@ if (!$suspect) :
         // Initialize the message
         $message = '';
         foreach ($expected as $field) :
-            if (isset($$field) && !empty($$field)) {
-                $val = $$field;
+            if (isset($field) && !empty($field)) {
+                $val = $field;
             } else {
                 $val = 'Not selected';
             }
@@ -78,3 +95,4 @@ if (!$suspect) :
         }
     endif;
 endif;
+*/

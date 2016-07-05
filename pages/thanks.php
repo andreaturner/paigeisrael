@@ -9,10 +9,10 @@
     <body>
         <br>
         
-        <div class="header-text-blue">
+        <div class="header-text large blue">
             Thank You!    
         </div>
-        <div class="header-medium-text-green">
+        <div class="header-text medium green">
             Thank you submitting the contact form. I'll be in touch soon!
         </div>  
     </body>
